@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './header';
 import GuessSection from './guess-section';
 import StatusSection from './status-section';
+import InfoSection from './info-section';
 
-export default class extends React.Component {
+export default class Game extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -11,16 +12,23 @@ export default class extends React.Component {
         }
     }
 
+    onMakeGuess(guess) {
+        console.log(typeof guess);
+        console.log(guess);
+    }
+
     render() {
         return(
             <div>
                 <Header />
                 <main>
-                    <GuessSection />
+                    <GuessSection makeGuess={guess => this.onMakeGuess(guess)}/>
                     <StatusSection />
-                    {/* <InfoSection /> */}
+                    <InfoSection />
                 </main>
             </div>
         );
     }
 }
+
+

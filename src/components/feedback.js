@@ -1,10 +1,13 @@
 import React from 'react';
+import './feedback.css';
 
-
-export default function FeedBack() {
+export default function FeedBack(props) {
     return (
-        <h2>
-            FeedBack
+        <h2
+         id="feedback"
+         role="status"
+        >
+            Make your Guess!
         </h2>
     );
 }
