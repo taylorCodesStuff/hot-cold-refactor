@@ -7,7 +7,7 @@ export default function FeedBack(props) {
          id="feedback"
          role="status"
         >
-            Make your Guess!
+            {props.feedback}
         </h2>
     );
 }

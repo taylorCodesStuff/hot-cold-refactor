@@ -5,7 +5,7 @@ import './header.css';
 export default function Header(props) {
     return (
         <section>
-            <Nav />
+            <Nav onReset={() => props.onReset()} />
             <h1>HOT or COLD</h1>
         </section>
     );

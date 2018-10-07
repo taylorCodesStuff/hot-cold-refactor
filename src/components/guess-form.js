@@ -14,6 +14,23 @@ export default class GuessForm extends React.Component {
     }
 
     render() {
+        if(this.props.feedback === "YOU WON! Click new game to play again!"){
+            return (
+                <form onSubmit={e => this.onSubmit(e)}>
+                <input 
+                    type="number"
+                    name="userGuess"
+                    id="userGuess"
+                    className="text"
+                    min="1"
+                    max="100"
+                    ref={input => this.input = input}
+                    required
+                >
+                </input>
+            </form>
+            );
+        }
         return (
             <form onSubmit={e => this.onSubmit(e)}>
                 <input 

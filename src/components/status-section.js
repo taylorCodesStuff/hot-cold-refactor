@@ -2,11 +2,11 @@ import React from 'react';
 import GuessCount from './guess-count';
 import GuessList from './guess-list';
 
-export default function StatusSection() {
+export default function StatusSection(props) {
     return (
         <section>
-            <GuessCount />
-            <GuessList />
+            <GuessCount count={props.guesses.length} />
+            <GuessList guesses={props.guesses} />
         </section>
     );
 }
